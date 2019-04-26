@@ -23,7 +23,7 @@
 // 3. 2 steps + 1 step
 
 
-// O(n) solution
+// O(n) - memoization solution
 var climbStairs = function(n, memo = {}) {
   if (n in memo) return memo[n];
   if (n === 1) return 1;
@@ -34,4 +34,15 @@ var climbStairs = function(n, memo = {}) {
   memo[n] = memo[n-1] + memo[n-2];
   
   return memo[n];
+};
+
+// 0(n) - tabulation solution
+var climbStairs = function(n) {
+  let table = new Array(n + 1);   // create array with length n + 1
+  table[0] = 1;
+  table[1] = 1;
+  for (let i = 2; i < table.length; i++) {
+      table[i] = table[i-1] + table[i-2];
+  }
+  return table[table.length-1];
 };

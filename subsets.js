@@ -20,13 +20,30 @@
 // ]
 
 function subsets(set) {
-  let res = [[]];
+  let table = [[]];
   for (let i = 0; i < set.length; i++) {
     let subs = [];
-    for (let j = 0; j < res.length; j++) {
-      subs.push(res[j].concat(set[i]));
+    for (let j = 0; j < table.length; j++) {
+      subs.push(table[j].concat(set[i]));
     }
-    res = res.concat(subs);
+    table = table.concat(subs);
   }
-  return res;
+  return table;
+}
+
+function subsets(set, memo = {}) {
+  if (set in memo) return memo[set];
+  if (set.length == 0) return [[]];
+  let last = set[set.length - 1];
+  let sliced = set.slice(0, set.length - 1);
+  memo[sliced] = subsets(sliced, memo);
+  debugger;
+  memo[sliced].forEach(sub => {
+    debugger;
+    let temp = sub.slice();
+    let arr = [];
+    arr.push(temp.concat(last));
+    memo[set] = arr;
+  });
+  return memo[set];
 }

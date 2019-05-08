@@ -17,12 +17,12 @@ var maxArea = function(height) {
 };
 
 // O(n) 
-
 var maxArea = function(height) {   
     let largestArea = 0;
+
     while (height.length > 1) {
         let left = height[0];
-        let right = height[height.length - 1]
+        let right = height[height.length - 1];
         let shorter = left < right ? left : right;
         let area = (height.length - 1) * shorter;
         if (largestArea < area) largestArea = area;

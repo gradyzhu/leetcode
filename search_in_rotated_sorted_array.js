@@ -19,7 +19,7 @@
 // Input: nums = [4,5,6,7,0,1,2], target = 3
 // Output: -1
 
-var search = function(nums, target, count = 0) {
+var search = function(nums, target) {
     
   let length = nums.length - 1;
   let frontCount = 0;

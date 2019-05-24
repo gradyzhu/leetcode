@@ -18,7 +18,7 @@
 //     let set = new Set();
 //     let curr = head;
 //     while(curr) {
-//         if (!set.has(curr)) {
+//         if (!set.ha s(curr)) {
 //             set.add(curr)
 //         } else {
 //             return true;

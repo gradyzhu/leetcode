@@ -74,5 +74,5 @@ var uniquePathsWithObstacles = function(obstacleGrid) {
   
   // return last item in matrix.
   
-  return obstacleGrid[obstacleGrid.length - 1][obstacleGrid[0].length - 1]
+  return obstacleGrid[obstacleGrid.length - 1][obstacleGrid[0].length - 1];
 };

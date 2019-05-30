@@ -30,7 +30,7 @@
 // memoizaton solution
 
 var uniquePaths = function(m, n, memo = {}) {
-  if ([m, n] in memo) return memo[[m,n]]
+  if ([m, n] in memo) return memo[[m,n]];
   if (m < 2 || n < 2) return 1;
   memo[[m, n]] = uniquePaths(m - 1, n, memo) + uniquePaths(m, n - 1, memo);
   return memo[[m,n]];

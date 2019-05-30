@@ -10,7 +10,7 @@ var productExceptSelf = function(nums) {
   let right = [];
   
   for (let i = 1; i < nums.length; i++) {
-      left[i] = left[i-1] * nums[i-1]
+      left[i] = left[i-1] * nums[i-1];
   }
   
   for (let i = nums.length - 1; i >= 0; i--) {

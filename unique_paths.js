@@ -43,9 +43,11 @@ const uniquePaths2 = function(m, n) {
   
   for (let i = 1; i < m; i++) {
       for (let j = 1; j < n; j++) {
+          // grid[curr] = grid[above] + grid[left]
           res[i][j] = res[i - 1][j] + res[i][j-1];
       }
   }
   
+  // return last item
   return res[m - 1][n - 1];
 };

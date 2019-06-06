@@ -7,6 +7,7 @@ var levelOrder = function(root) {
   if (!root) return [];
   let res = [];
   let queue = [root];
+
   while (queue.length) {
       let level = [];
       let sub = [];
@@ -19,5 +20,6 @@ var levelOrder = function(root) {
       res.push(sub);
       queue = level;
   }
+  
   return res;
 };

@@ -23,7 +23,7 @@ var maxProfit = function(prices) {
   let maxProfit = 0;
   
   for (let i = 1; i < prices.length; i++) {
-      let currPrice = prices[i]
+      let currPrice = prices[i];
       if (currPrice < minPrice) {
           minPrice = currPrice;
       } else {
@@ -33,5 +33,6 @@ var maxProfit = function(prices) {
           }
       }
   }
+  
   return maxProfit;
-}
+};

@@ -17,7 +17,7 @@
 
 
 var isHappy = function(n) {
-  let hash = {}
+  let hash = {};
   while (n != 1) {
       if (n in hash) return false;
       hash[n] = 0;

@@ -18,7 +18,7 @@ var maxProfit = function(prices) {
       
       if (prices[i] >= prices[j]) {
           i = j;
-          j++
+          j++;
           continue;
       }
       
@@ -33,8 +33,8 @@ var maxProfit = function(prices) {
           maxProfit += next - curr;
       }
       
-      i = j+1
-      j = j+2
+      i = j+1;
+      j = j+2;
   }
   
   return maxProfit;

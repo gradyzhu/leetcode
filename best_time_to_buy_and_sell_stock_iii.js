@@ -46,9 +46,9 @@ var maxProfit = function(prices) {
               let profitAtM = currTrans + restOfTrans;
               if (profitAtM > transProfit) transProfit = profitAtM;
           }
-          dp[i][j] = Math.max(noTransProfit, transProfit)
+          dp[i][j] = Math.max(noTransProfit, transProfit);
       }
   }
       
-  return dp[2][prices.length -1]
-}
+  return dp[2][prices.length -1];
+};

@@ -8,7 +8,7 @@ var maxAreaOfIsland = function(grid) {
   let maxArea = 0;
   for (let i = 0; i < grid.length; i++) {
       for (let j = 0; j < grid[0].length; j++) {
-          maxArea = Math.max(maxArea, dfs(grid, i, j))
+          maxArea = Math.max(maxArea, dfs(grid, i, j));
       }
   }
   return maxArea;
@@ -17,5 +17,8 @@ var maxAreaOfIsland = function(grid) {
 const dfs = (grid, i, j) => {
   if (i >= grid.length || j >= grid[0].length || i < 0 || j < 0 || grid[i][j] != 1) return 0;
   grid[i][j] = 0;
-  return 1 + dfs(grid, i, j+1) + dfs(grid, i, j-1) + dfs(grid, i-1, j) + dfs(grid, i+1, j);
-};
+  return (
+    1 + dfs(grid, i, j+1) + dfs(grid, i, j-1) + 
+    dfs(grid, i-1, j) + dfs(grid, i+1, j)
+  );
+}; 

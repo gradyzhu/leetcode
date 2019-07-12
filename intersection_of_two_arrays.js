@@ -21,24 +21,35 @@
 // What if nums1's size is small compared to nums2's size? Which algorithm is better?
 // What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
-var intersect = function(nums1, nums2) {
-  let res = [];
-  let hash = {};
+// var intersect = function(nums1, nums2) {
+//   let res = [];
+//   let hash = {};
 
-  for (let i = 0; i < nums1.length; i++) {
-      if (nums1[i] in hash) {
-          hash[nums1[i]]++;
-      } else {
-          hash[nums1[i]] = 1;
-      }
-  }
+//   for (let i = 0; i < nums1.length; i++) {
+//       if (nums1[i] in hash) {
+//           hash[nums1[i]]++;
+//       } else {
+//           hash[nums1[i]] = 1;
+//       }
+//   }
+  
+//   for (let i = 0; i < nums2.length; i++) {
+//       if (hash[nums2[i]] > 0) {
+//           res.push(nums2[i]);
+//           hash[nums2[i]]--;
+//       }
+//   }
+  
+//   return res;
+// };
+
+var intersection = function(nums1, nums2) {
+  let set = new Set(nums1);
+  let res = new Set();
   
   for (let i = 0; i < nums2.length; i++) {
-      if (hash[nums2[i]] > 0) {
-          res.push(nums2[i]);
-          hash[nums2[i]]--;
-      }
+      if (set.has(nums2[i])) res.add(nums2[i]);
   }
   
-  return res;
+  return Array.from(res);
 };

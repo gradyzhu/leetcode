@@ -24,8 +24,8 @@ var lemonadeChange = function(bills) {
           if (hash[5] < 1) return false;
           if (hash[5] < 3 && hash[10] < 1) return false;
           if (hash[5] >= 1 && hash[10] >= 1) {
-              hash[5]--
-              hash[10]--
+              hash[5]--;
+              hash[10]--;
           } else {
               hash[5] -= 3;
           }

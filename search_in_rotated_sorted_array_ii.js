@@ -27,7 +27,7 @@ const bSearch = (arr, target) => {
   } else {
       return bSearch(arr.slice(mid+1), target);
   }
-}
+};
 
 
 const findPivot = arr => {
@@ -50,5 +50,4 @@ const findPivot = arr => {
       }
   }
   return low;
-  
-}
+};

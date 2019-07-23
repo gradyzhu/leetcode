@@ -6,12 +6,10 @@ var lengthOfLIS = function(nums) {
   let i = 1;
   
   while (i < nums.length) {
-      let currEnd = nums[i];
       let j = 0;
       while (j < i) {
-          let curr = nums[j];
           if (nums[j] < nums[i]) {
-              dp[i] = Math.max(dp[i], dp[j] + 1)
+              dp[i] = Math.max(dp[i], dp[j] + 1);
           }
           j++;
       }

@@ -25,18 +25,17 @@ const reverseList = head => {
       node = tmp;
   }
   return previous;
-}
+};
 
 const findMid = head => {
   let slow = head;
   let fast = head;
-  let count = 0;
   
   while (fast && fast.next) {
-      slow = slow.next
+      slow = slow.next;
       fast = fast.next.next;
       count++;
   }
   
   return slow;
-}
+};
